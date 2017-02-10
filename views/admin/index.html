@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>OnlineStore | Dashboard</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <script src="public/js/angular.min.js"></script>
+        <script src="public/js/core.js"></script>
+    </head>
+    <body ng-cloak class="skin-black" ng-app="ostoreApp" ng-controller="ostoreController">
+
+        <form  name="searchform" ng-submit="doSearch()">
+            <div class="form-group" style="width:50%">
+                <label for="inputdefault">Search Feild</label>
+                <input class="form-control" id="searchfeild" name="searchfeild" ng-model="searchfeild"  type="text">
+            </div>
+            <div class="form-group" style="width:50%">
+                <input class="form-control input-sm" id="searchbutton" type="submit" value="Search">
+            </div>
+        </form>
+
+        <div>
+            Search Result: <b>{{respObj.data.response.brands}}</b> <i>{{respObj.data.response.clothingtype}}</i>
+        </div>
+  
+
+    </body>
+</html>
